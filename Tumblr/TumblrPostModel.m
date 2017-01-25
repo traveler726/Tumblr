@@ -17,8 +17,8 @@
     if (self) {  // Verify that it exists.
         
         // Initial the model by parsing the JSON Dictionary
-        self.imageURL = dictionary[@"photos"][0][@"original_size"][@"url"];
-        NSLog(@"The TumblrPost has an imageURL of $@", self.imageURL);
+        self.imageURL = [NSURL URLWithString:dictionary[@"photos"][0][@"original_size"][@"url"]];
+        NSLog(@"The TumblrPost has an imageURL of %@", self.imageURL);
         
         // Build the image path from the poster path and API:
         // The movie poster is available by appending the returned poster_path to https://image.tmdb.org/t/p/w342.

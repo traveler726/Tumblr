@@ -12,6 +12,9 @@
 #import <AFNetworking/UIImageView+AFNetworking.h>  // Adds functionality to the ImageView
 
 @interface PhotosViewController () <UITableViewDataSource>;
+
+@property (weak, nonatomic) IBOutlet UITableView *tumblrTableView;
+
 @property (strong, nonatomic) NSArray<TumblrPostModel *> *posts;
 
 @end
@@ -20,9 +23,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-     self.tumblrTableView.rowHeight = 320;
-    
+    self.tumblrTableView.rowHeight = 320;
+    self.tumblrTableView.dataSource = self;
+    [self fetchPosts];
+}
+-(void) fetchPosts {
+
     // Do any additional setup after loading the view, typically from a nib.
     NSString *apiKey = @"Q6vHoaVm5L1u2ZAW1fqv3Jw48gFzYVg9P0vH0VHl3GVy6quoGV";
     NSString *urlString =
