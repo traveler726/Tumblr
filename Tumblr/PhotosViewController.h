@@ -10,6 +10,7 @@
 
 @interface PhotosViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *tumblrTableView;
 
 @end
 
