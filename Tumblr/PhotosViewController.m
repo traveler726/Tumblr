@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  PhotosViewController.m
 //  Tumblr
 //
 //  Created by Jennifer Beck on 1/25/17.
 //  Copyright © 2017 JenniferBeck. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "PhotosViewController.h"
 
-@interface ViewController ()
+@interface PhotosViewController ()
 
 @end
 
-@implementation ViewController
+@implementation PhotosViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
