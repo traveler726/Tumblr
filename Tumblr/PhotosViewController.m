@@ -66,7 +66,7 @@
                                                     }
                                                     // Since ViewController is defined as non-mutable the access to it will be non-mutable.
                                                     // This is true even tho the backing object is actually a mutable array.
-                                                    self.posts = posts;
+                                                    self.posts = models;
                                                     
                                                     // force the tableView new info to display
                                                     [self.tumblrTableView reloadData];
